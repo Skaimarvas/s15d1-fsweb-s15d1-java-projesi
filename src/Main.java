@@ -1,9 +1,13 @@
 import java.util.*;
 
 public class Main {
+    /*
     private static ArrayList<String> groceryList = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
+
+     */
     public static void main(String[] args) {
+        /*
            int option;
 
         do {
@@ -28,8 +32,39 @@ public class Main {
                         break;
                 }
             } while (option != 0);
-        }
 
+         */
+        MobilePhone myphone = new MobilePhone("555-55-55");
+         Contact bob = Contact.createContact("Bob", "31415926");
+         Contact alice = Contact.createContact("Alice", "16180339");
+         Contact tom = Contact.createContact("Tom", "11235813");
+         Contact jane = Contact.createContact("Jane", "23571113");
+
+
+         myphone.addNewContact(bob);
+         myphone.addNewContact(alice);
+         myphone.addNewContact(tom);
+         myphone.addNewContact(jane);
+
+         myphone.printContact();
+
+         myphone.updateContact(bob,new Contact("Bob", "258-58-58"));
+
+        System.out.println("____________BOB_NUMARA_GÜNCELLEME__________");
+         myphone.printContact();
+
+
+        System.out.println("_____Alice_Numara_Silme______________");
+        myphone.removeContact(alice);
+        myphone.printContact();
+
+
+        System.out.println("______Isime_göre_contact_bulma______");
+        myphone.queryContact("tom");
+
+
+        }
+/*
     public static void printMenu(){
         System.out.println("0: Uygulamayı Sonlandır");
         System.out.println("1: Ürün Ekle");
@@ -71,6 +106,8 @@ public class Main {
     public static boolean checkItem(String item){
         return groceryList.contains((item));
     }
+
+ */
 
     }
 
